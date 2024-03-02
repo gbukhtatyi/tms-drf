@@ -34,7 +34,7 @@ def notify_before_hour(hours):
 
         for user in event.users.all():
             send_mail(
-                f"[Events App] Star event: {hours + 1}",
+                f"[Events App] Start event: {event.meeting_time}",
                 plain_message,
                 "info@events.local",
                 [user.email],
