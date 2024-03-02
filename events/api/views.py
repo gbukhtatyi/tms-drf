@@ -13,7 +13,7 @@ from .permissions import IsSuperUser
 from .serializers import EventSerializer
 
 
-class EventListCreateAPIView(ListAPIView):
+class EventListAPIView(ListAPIView):
     permission_classes = [IsSuperUser]
 
     queryset = Event.objects.filter(meeting_time__gt=datetime.now())
